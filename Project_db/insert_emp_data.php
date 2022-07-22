@@ -6,7 +6,7 @@ $email=$_POST['email'];
 $phone=$_POST['phone'];
 $designation=$_POST['designation'];
 $salary=$_POST['salary'];
-$password=$_POST['password'];
+$password=md5($_POST['password']);
 
 
 
