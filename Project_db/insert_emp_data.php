@@ -1,4 +1,6 @@
 <?php
+include "dbconfig.php";
+
 // fetching data from registration.php file
 if(isset($_POST['register'])){
 $name=$_POST['username'];
@@ -7,14 +9,6 @@ $phone=$_POST['phone'];
 $designation=$_POST['designation'];
 $salary=$_POST['salary'];
 $password=md5($_POST['password']);
-
-
-
-// database connection
-$con=new mysqli("localhost","root","","emp_data");
- if($con->connect_error){
-  die("something wrong in database connection..............Please Check.");
- }
 
 // inserting data into table
 $sql="insert into emp_table values(0,'$name','$email','$phone','$designation',$salary,'$password')";
