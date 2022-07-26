@@ -11,7 +11,7 @@ $salary=$_POST['salary'];
 $password=md5($_POST['password']);
 
 // inserting data into table
-$sql="insert into emp_table values(0,'$name','$email','$phone','$designation',$salary,'$password')";
+$sql="insert into emp_table values(0,'$name','$email','$phone','$designation',$salary,'$password','')";
 if($con->query($sql)){
 
 

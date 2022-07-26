@@ -7,12 +7,12 @@ if(isset($_SESSION['session_id'])){
   $result=$con->query($sql);
   if($result->num_rows>0){
     $data=$result->fetch_assoc();
-    
     $username=$data['username'];
     $email=$data['email'];
     $designation=$data['designation'];
     $salary=$data['salary'];
     $phone=$data['phone'];
+    $profile_image=$data['profile_image'];
 
   }
 }
@@ -29,7 +29,7 @@ if(isset($_SESSION['session_id'])){
 </head>
 <body>
 <div class="card" style="width:400px;margin:auto;margin-top:100px;padding:20px">
-  <!-- <img src="" class="card-img-top" alt=""> -->
+  <img src="<?php echo $profile_image;?>" style="height:200px;width:200px;border-radius:50%;margin:auto" class="card-img-top" alt="">
   <div class="card-body">
     <h1>Profile Details</h1>
     <h5 class="card-title"><?php echo "Hello  $username";?></h5>
@@ -37,7 +37,14 @@ if(isset($_SESSION['session_id'])){
    <h6><?php echo "Your Phone: ",$phone;?></h6>
    <h6><?php echo "Your Designation: ",$designation;?></h6>
    <h6><?php echo "Your Salary: ",$salary;?></h6>
-    <a href="#" class="btn btn-primary">Upload image</a>
+   <form action="fileupload.php" method="post" enctype="multipart/form-data">
+   <div class="input-group mb-3">
+       <input type="file" name="profile_image" class="form-control" id="inputGroupFile02">
+       <button class="btn btn-outline btn-primary" type="submit" id="inputGroupFileAddon04">Button</button>
+  </div>
+   </form><br/>
+   <button class="btn btn-outline btn-success">Update</button>
+   <button class="btn btn-outline btn-danger"><a href="home.php">Back</a></button>
   </div>
 </div>
 
