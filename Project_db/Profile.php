@@ -43,7 +43,7 @@ if(isset($_SESSION['session_id'])){
        <button class="btn btn-outline btn-primary" type="submit" id="inputGroupFileAddon04">Button</button>
   </div>
    </form><br/>
-   <button class="btn btn-outline btn-success">Update</button>
+   <button class="btn btn-outline btn-success"><a href="UpdateProfile.php">Update</a></button>
    <button class="btn btn-outline btn-danger"><a href="home.php">Back</a></button>
   </div>
 </div>
