@@ -27,6 +27,9 @@ session_start();
           <a class="nav-link" href="profile.php">Profile</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="my_task.php">MY Task</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="logout.php">Logout</a>
         </li>
       </ul>

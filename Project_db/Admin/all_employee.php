@@ -60,8 +60,8 @@
                 <td><?php echo $desig;?></td>
                 <td><?php echo $salary;?></td>
       <?php
-                echo  "<td><a href='addtask.php?eid=$data[id]'>Add Task</a></td>";
-                echo  "<td><a href='delete.php?uid=$data[id]'>delete</a></td>";
+                echo  "<td style='background-color:black;color:white;padding:5px;text-align:center'><a style='font-size:18px; color:white;text-decoration:none' href='addtask.php?eid=$data[id]'>Add Task</a></td>";
+                echo  "<td style='background-color:black;color:white;padding:5px;text-align:center'><a style='font-size:18px; color:white;text-decoration:none' href='delete.php?uid=$data[id]'>delete</a></td>";
       ?> 
           </tr>    
           <?php
