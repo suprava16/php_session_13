@@ -29,7 +29,8 @@ if(isset($_SESSION['session_id'])){
 </head>
 <body>
 <div class="card" style="width:400px;margin:auto;margin-top:100px;padding:20px">
-  <img src="<?php echo $profile_image;?>" style="height:200px;width:200px;border-radius:50%;margin:auto" class="card-img-top" alt="">
+<img src="<?php echo $profile_image;?>" style="height:200px;width:200px;border-radius:50%;margin:auto" class="card-img-top" alt="">
+  <!-- <a href="<?php echo $profile_image;?>" target="_blank">PDF LINK</a> -->
   <div class="card-body">
     <h1>Profile Details</h1>
     <h5 class="card-title"><?php echo "Hello  $username";?></h5>
